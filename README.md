@@ -105,7 +105,7 @@ A production-ready, containerized microservice that evaluates student resumes ag
 - 📘 **suggested_learning_path**: Hardcoded per missing skill  
 ---
 # 🗂️ Project Structure
-```json
+```
 resume-scorer/
 ├── app/
 │ ├── main.py
