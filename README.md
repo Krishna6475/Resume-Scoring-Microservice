@@ -28,7 +28,8 @@ A production-ready, containerized microservice that evaluates student resumes ag
   "goal": "Amazon SDE",
   "resume_text": "Final year student skilled in Java, Python, DSA, SQL, REST APIs..."
 }
-
+```
+---
 ## 📥 Input Fields
 
 | Field        | Type   | Required | Description                          |
@@ -51,7 +52,8 @@ A production-ready, containerized microservice that evaluates student resumes ag
     "Complete SQL joins and indexing course"
   ]
 }
-
+```
+---
 # ⚙️ API Endpoints
 
 | Method | Endpoint    | Description                       |
@@ -69,7 +71,7 @@ A production-ready, containerized microservice that evaluates student resumes ag
 - 🎯 **Inputs**: Resume text
 - 📈 **Outputs**: Score ∈ [0.0, 1.0]
 - ⚙️ **Controlled by**: `config.json`
-
+---
 # 🗃️ Training Data Format
 
 ```json
@@ -85,7 +87,8 @@ A production-ready, containerized microservice that evaluates student resumes ag
     "label": 0
   }
 ]
-
+```
+---
 # 📚 Skill Logic (`goals.json`)
 
 ```json
@@ -93,13 +96,14 @@ A production-ready, containerized microservice that evaluates student resumes ag
   "Amazon SDE": ["Java", "Data Structures", "System Design", "SQL"],
   "ML Internship": ["Python", "Numpy", "Scikit-learn", "Linear Algebra"]
 }
-
+```
+---
 # 🔍 Used for
 
 - ✅ **matched_skills**: Detected from resume  
 - ❌ **missing_skills**: Not found but required  
 - 📘 **suggested_learning_path**: Hardcoded per missing skill  
-
+---
 # 🗂️ Project Structure
 
 resume-scorer/
@@ -119,7 +123,7 @@ resume-scorer/
 ├── schema.json
 └── tests/
 └── test_score.py
-
+---
 # ⚙️ Sample `config.json`
 
 ```json
@@ -130,7 +134,8 @@ resume-scorer/
   "model_goals_supported": ["Amazon SDE", "ML Internship"],
   "default_goal_model": "Amazon SDE"
 }
-
+```
+---
 # 🔎 Defines
 
 - **Minimum passing score**
@@ -139,7 +144,7 @@ resume-scorer/
 - **Default goal fallback**
 
 > ❗ *App will fail if config is missing or invalid.*
-
+---
 # 🐳 Docker Instructions
 
 Build and run the containerized microservice:
@@ -150,7 +155,8 @@ docker build -t resume-scorer .
 
 # Run the Docker container
 docker run -p 8000:8000 resume-scorer
-
+```
+---
 # 📄 License
 
 This project is for educational and internal use only.  
